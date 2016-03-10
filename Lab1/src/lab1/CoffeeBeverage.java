@@ -4,7 +4,8 @@ public class CoffeeBeverage extends Beverage {
 	private String size;
 
 	public CoffeeBeverage() {
-		super.sizeFactor = new CoffeeBased();
+		double[] prices = { 0.4, 0.7, 1.0, 1.3 };	
+		super.sizeFactor = new SizeFactor(prices);
 	}
 
 	public void setSize(String size) {

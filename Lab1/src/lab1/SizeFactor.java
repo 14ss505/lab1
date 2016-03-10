@@ -1,29 +1,25 @@
 package lab1;
 
-import java.util.ArrayList;
+import java.util.Hashtable;
 
 public class SizeFactor {
+
+	protected Hashtable<String, Double> hash = new Hashtable<String, Double>();
 	String[] sizes = { "small", "medium", "large", "grant" };
-	double[] prices ;
-	
-	SizeFactor(){
-		setASCPrices( prices);
+		
+
+	SizeFactor(double[] prices) {
+		setPrices(prices);
 	}
 
-	public void setASCPrices(double[] prices) {
-		this.prices = prices;
+	public void setPrices(double[] prices) {
+		for (int i = 0; i < sizes.length; i++) {
+			this.hash.put(sizes[i], prices[i]);
+		}
 	}
 
 	public double sizeCost(String size) {
-		int i = 0;
-		for (i = 0; i < sizes.length; i++) {
-			if (sizes[i].toLowerCase().equals(size.toLowerCase())) {
-				break;
-			}
-		}
-		// check if i is valid
-
-		return prices[i];
+		return hash.get(size.toLowerCase());
 	}
 
 }
