@@ -1,16 +1,18 @@
 package lab1;
 
-public class TeaBased implements SizeFactor {
+import java.util.Hashtable;
 
+public class TeaBased implements SizeFactor {
+	private Hashtable<String,Double> hash=new Hashtable<String,Double>();
+	TeaBased(){
+		hash.put("small", 0.2);
+		hash.put("medium", 0.5);
+		hash.put("large", 0.7);
+		hash.put("grant", 0.9);
+	}
 	@Override
 	public double sizeCost(String size) {
-		if (size.toLowerCase().equals("small")) {
-			return 0.2;
-		} else if (size.toLowerCase().equals("medium")) {
-			return 0.5;
-		} else {
-			return 0.7;
-		}
+		return hash.get(size.toLowerCase());
 	}
 
 }
