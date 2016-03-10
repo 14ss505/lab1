@@ -48,6 +48,18 @@ public class Main {
 			order = new Espresso();
 			((CoffeeBeverage) order).setSize(disArr[i]);
 			order = new WhipCream(order);
+		} else if (beveStr.equals("decaf mocha")) {//following 3 is the addition
+			order = new Decaf();
+			((CoffeeBeverage) order).setSize(disArr[i]);
+			order = new Chocolate(order);
+		} else if (beveStr.equals("decaf latte")) {
+			order = new Decaf();
+			((CoffeeBeverage) order).setSize(disArr[i]);
+			order = new Milk(order);
+		} else if (beveStr.equals("decaf cappuccino")) {
+			order = new Decaf();
+			((CoffeeBeverage) order).setSize(disArr[i]);
+			order = new WhipCream(order);
 		} else if (beveStr.equals("green tea")) {
 			order = new GreenTea();
 			((TeaBeverage) order).setSize(disArr[i]);
