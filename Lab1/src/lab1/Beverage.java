@@ -1,8 +1,8 @@
 package lab1;
 
 public class Beverage {
-	protected SizeFactor sizeFactor;
-	private String description;
+	protected SizeFactor sizeFactor;//for size cost
+	protected String description;
 
 	public double cost() {
 		return 0;
