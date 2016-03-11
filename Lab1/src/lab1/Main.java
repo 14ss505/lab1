@@ -36,6 +36,10 @@ public class Main {
 			order = new CoffeeBeverage();
 			order = new HouseBlend();
 			((CoffeeBeverage) order).setSize(disArr[i]);
+		}else if (beveStr.equals("decaf")) {
+			order = new CoffeeBeverage();
+			order = new Decaf();
+			((CoffeeBeverage) order).setSize(disArr[i]);
 		} else if (beveStr.equals("mocha")) {
 			order = new Espresso();
 			((CoffeeBeverage) order).setSize(disArr[i]);
