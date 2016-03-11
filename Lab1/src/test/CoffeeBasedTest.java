@@ -1,9 +1,11 @@
-package lab1;
+package test;
 
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import lab1.CoffeeBased;
 
 public class CoffeeBasedTest {
 	CoffeeBased cb;
