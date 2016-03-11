@@ -8,7 +8,7 @@ public class CoffeeBased implements SizeFactor {
 		hash.put("small", 0.4);
 		hash.put("medium", 0.7);
 		hash.put("large", 1.0);
-		hash.put("grant", 1.3);
+		hash.put("grand", 1.3);
 	}
 	@Override
 	public double sizeCost(String size) {

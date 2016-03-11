@@ -8,7 +8,7 @@ public class TeaBased implements SizeFactor {
 		hash.put("small", 0.2);
 		hash.put("medium", 0.5);
 		hash.put("large", 0.7);
-		hash.put("grant", 0.9);
+		hash.put("grand", 0.9);
 	}
 	@Override
 	public double sizeCost(String size) {
