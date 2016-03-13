@@ -1,10 +1,9 @@
 package lab1;
 
 public class Decaf extends CoffeeBeverage {
-//	private String description;
 
 	public Decaf() {
-		description = "Decaf";
+		this.setDescription("decaf");;
 	}
 
 	public String getDescription() {

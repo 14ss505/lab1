@@ -7,10 +7,6 @@ public class BeverageWithIngredient extends Beverage {
 		this.drink = drink;
 	}
 	
-	public String getDescription(){
-		return super.getDescription();
-	}
-	
 	public double cost() {
 		return drink.cost();
 	}
