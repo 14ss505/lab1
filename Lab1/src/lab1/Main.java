@@ -4,11 +4,12 @@ import java.text.DecimalFormat;
 
 public class Main {
 	public static void main(String[] args) {
+		//get the input array and put it into disArr 
 		String[] disArr = new String[args.length];
 		for (int j = 0; j < args.length; j++) {
 			disArr[j] = args[j].toLowerCase();
 		}
-
+		//check if it contains a size command
 		int i;
 		for (i = 0; i < disArr.length; i++)
 			if (disArr[i].equals("small") || disArr[i].equals("medium")
@@ -19,7 +20,7 @@ public class Main {
 			System.out.println("Must set a size!");
 			return;
 		}
-
+		//get the name of drink(maybe its length is 2)
 		String beveStr;
 		if (i == 2) {
 			beveStr = disArr[0] + " " + disArr[1];

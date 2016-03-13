@@ -1,11 +1,10 @@
-package test;
+
+package lab1;
 
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import lab1.CoffeeBased;
 
 public class CoffeeBasedTest {
 	CoffeeBased cb;
@@ -20,6 +19,7 @@ public class CoffeeBasedTest {
 		Assert.assertEquals(0.4, cb.sizeCost("small"), 0);
 		Assert.assertEquals(0.7, cb.sizeCost("medium"), 0);
 		Assert.assertEquals(1.0, cb.sizeCost("large"), 0);
+		Assert.assertEquals(1.3, cb.sizeCost("grand"), 0);
 	}
 
 }
