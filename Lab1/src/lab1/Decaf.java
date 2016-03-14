@@ -13,4 +13,5 @@ public class Decaf extends CoffeeBeverage {
 	public double cost() {
 		return super.cost() + 0.5;
 	}
+
 }

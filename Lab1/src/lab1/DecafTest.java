@@ -4,6 +4,7 @@ import org.jmock.integration.junit4.JUnitRuleMockery;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
 import org.jmock.integration.junit4.JMock;
+
 import java.text.DecimalFormat;
 
 import org.junit.Assert;
@@ -11,37 +12,56 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
-import junit.framework.TestCase;
+public class DecafTest {
+//	Beverage order1;
+//	Beverage order2;
+//	Beverage order3;
+//	Beverage order4;
+//	Milk milk;
+//	Chocolate choco;
+//	WhipCream wc;
+//	String result;
 
-public class DecafTest extends TestCase {
-	Beverage order1;
-	Beverage order2;
-	Beverage order3;
-	Beverage order4;
-	Milk milk;
-	Chocolate choco;
-	WhipCream wc;
-	String result;
-	@Rule 
-	public JUnitRuleMockery context = new JUnitRuleMockery();
+	@Rule
+	private JUnitRuleMockery context = new JUnitRuleMockery();
+
+	private final CoffeeBase coffeebase = context.mock(CoffeeBase.class);
+	private Decaf decaf;
 
 	@Before
 	public void setUp() throws Exception {
 		decaf = new Decaf();
+		decaf.add(coffeebase);
+		final String size = "grand";
+		decaf.setSize(size);//defined in Bevarage
+		decaf.setSizeFactor(coffeebase);
+		//set expectation
+		context.checking(new Expectations() {
+			{
+				oneOf(coffeebase).sizeCost(size);
+				will(returnValue(1.3));
+			}
+		});
 		
-		order1 = new CoffeeBeverage();
-		order1 = new Decaf();
-		order2 = new CoffeeBeverage();
-		order2 = new Decaf();
-		order3 = new CoffeeBeverage();
-		order3 = new Decaf();
-		order4 = new CoffeeBeverage();
-		order4 = new Decaf();
-		
-//		final 
+//		order1 = new CoffeeBeverage();
+//		order1 = new Decaf();
+//		order2 = new CoffeeBeverage();
+//		order2 = new Decaf();
+//		order3 = new CoffeeBeverage();
+//		order3 = new Decaf();
+//		order4 = new CoffeeBeverage();
+//		order4 = new Decaf();
+
 	}
 
-@Test(timeout = 1000)
+	// todo: jmock testCost mock CoffeeBase
+	@Test
+	public void testCost() {
+		
+	}
+
+	/*
+	@Test(timeout = 1000)
 	public void testDescription() {
 		// decaf
 		result = order1.getDescription();
@@ -79,15 +99,11 @@ public class DecafTest extends TestCase {
 		order4 = new WhipCream(order4);
 		assertEquals(2.1, Double.parseDouble(df.format(order4.cost())));
 	}
-	
+*/
 	@Test(timeout = 1000)
 	public void testGetDescription() {
-		Assert.assertEquals("Decaf description", "Decaf", decaf.getDescription());
+		Assert.assertEquals("Decaf description", "Decaf",
+				decaf.getDescription());
 	}
-	
-	//todo: jmock testCost   mock CoffeeBase
-	@Test
-	public void testCost() {
-		
-	}
+
 }
