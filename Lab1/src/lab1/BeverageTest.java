@@ -28,12 +28,6 @@ public class BeverageTest {
 	}
 	
 	@Test
-	public void testSetSize() {
-		beverage.setSize("small");
-		Assert.assertEquals("Size", "small", beverage.size);
-	}
-	
-	@Test
 	public void testCost() {
 		DecimalFormat df = new DecimalFormat(".0");
 		Assert.assertEquals(0.0, Double.parseDouble(df.format(beverage.cost())), 0);
