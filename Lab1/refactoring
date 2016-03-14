@@ -2,4 +2,4 @@
 2.增加了setDescription方法，便于在运行时修改description
 
 1.把size属性和setsize()方法从Beverage移回TeaBeaverage和CoffeeBeverage,因为这两个是后者的专有扩展，BevarageWithIngredient不需要size
-2.
+2.将Main函数中的获取order实例的过程封装在一个方法getOrder内

@@ -4,12 +4,12 @@ import java.text.DecimalFormat;
 
 public class Main {
 	public static void main(String[] args) {
-		//get the input array and put it into disArr 
+		/*1.get the input array and put it into disArr */
 		String[] disArr = new String[args.length];
 		for (int j = 0; j < args.length; j++) {
 			disArr[j] = args[j].toLowerCase();
 		}
-		//check if it contains a size command
+		/*2.check if it contains a size command*/
 		int i;
 		for (i = 0; i < disArr.length; i++)
 			if (disArr[i].equals("small") || disArr[i].equals("medium")
@@ -20,7 +20,7 @@ public class Main {
 			System.out.println("Must set a size!");
 			return;
 		}
-		//get the name of drink(maybe its length is 2)
+		/*3.get the name of drink(maybe its length is 2)*/
 		String beveStr;
 		if (i == 2) {
 			beveStr = disArr[0] + " " + disArr[1];
@@ -28,7 +28,31 @@ public class Main {
 			beveStr = disArr[0];
 		}
 
+		/*4.get the order instance*/
+		Beverage order=getOrder(disArr, i,beveStr);
+		if(order==null)	{
+			System.out.println("Illegal input: " + beveStr);
+			return;
+		}
+		/**
+		 * How do I get the description of each order instead of doing this
+		 * stupid thing forever (except for printing the args)?
+		 */
+		if (order instanceof BeverageWithIngredient) {
+			((BeverageWithIngredient) order).getDescription();
+		} else if (order instanceof Espresso) {
+			((Espresso) order).getDescription();
+		}
+		// and so on...
+		
+		/*5.print the cost*/
+		DecimalFormat df = new DecimalFormat(".0");
+		System.out.println("The total cost of your order is: "
+				+ df.format(order.cost()));
+	}
+	public static Beverage getOrder(String[] disArr,int i,String beveStr){
 		Beverage order;
+		String[] kindsOfDrink={"espresso"};
 		if (beveStr.equals("espresso")) {
 			order = new CoffeeBeverage();
 			order = new Espresso();
@@ -87,10 +111,10 @@ public class Main {
 			((TeaBeverage) order).setSize(disArr[i]);
 			order = new Milk(order);
 		} else {
-			System.out.println("Illegal input: " + beveStr);
-			return;
+			//System.out.println("Illegal input: " + beveStr);
+			return null;
 		}
-
+		/*add the ingredients*/
 		for (i++; i < disArr.length; i++) {
 			if (disArr[i].equals("chocolate")) {
 				order = new Chocolate(order);
@@ -107,20 +131,6 @@ public class Main {
 				System.out.println("Illegal input: " + disArr[i]);
 			}
 		}
-
-		/**
-		 * How do I get the description of each order instead of doing this
-		 * stupid thing forever (except for printing the args)?
-		 */
-		if (order instanceof BeverageWithIngredient) {
-			((BeverageWithIngredient) order).getDescription();
-		} else if (order instanceof Espresso) {
-			((Espresso) order).getDescription();
-		}
-		// and so on...
-
-		DecimalFormat df = new DecimalFormat(".0");
-		System.out.println("The total cost of your order is: "
-				+ df.format(order.cost()));
+		return order;
 	}
 }
