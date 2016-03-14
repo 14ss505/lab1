@@ -3,7 +3,7 @@ package lab1;
 public class Ginger extends BeverageWithIngredient {
 	public Ginger(Beverage drink) {
 		super(drink);
-		description += " ginger";
+		this.setDescription(drink.getDescription()+ " ginger");;
 	}
 
 	public double cost() {

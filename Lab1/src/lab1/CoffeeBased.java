@@ -1,16 +1,18 @@
 package lab1;
 
-public class CoffeeBased implements SizeFactor {
+import java.util.Hashtable;
 
+public class CoffeeBased implements SizeFactor {
+	private Hashtable<String,Double> hash=new Hashtable<String,Double>();
+	CoffeeBased(){
+		hash.put("small", 0.4);
+		hash.put("medium", 0.7);
+		hash.put("large", 1.0);
+		hash.put("grand", 1.3);
+	}
 	@Override
 	public double sizeCost(String size) {
-		if (size.toLowerCase().equals("small")) {
-			return 0.4;
-		} else if (size.toLowerCase().equals("medium")) {
-			return 0.7;
-		} else {
-			return 1.0;
-		}
+		return hash.get(size.toLowerCase());
 	}
 
 }
