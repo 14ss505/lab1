@@ -1,2 +1,5 @@
 1.若兄弟类之间有相同的方法和属性，将方法和属性提升到了父类中
 2.增加了setDescription方法，便于在运行时修改description
+
+1.把size属性和setsize()方法从Beverage移回TeaBeaverage和CoffeeBeverage,因为这两个是后者的专有扩展，BevarageWithIngredient不需要size
+2.
