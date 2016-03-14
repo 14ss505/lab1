@@ -3,7 +3,7 @@ package lab1;
 public class Espresso extends CoffeeBeverage {
 	
 	public Espresso() {
-		this.setDescription("Esspresso");
+		this.setDescription("Espresso");
 	}
 	
 	public String getDescription() {

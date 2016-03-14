@@ -37,19 +37,19 @@ public class EspressoTest extends TestCase {
 	public void testDescription() {
 		// espresso
 		result = order1.getDescription();
-		assertEquals("Esspresso", result);
+		assertEquals("Espresso", result);
 		// espresso+milk
 		order2 = new Milk(order2);
 		result = order2.getDescription();
-		assertEquals("Esspresso milk", result);
+		assertEquals("Espresso milk", result);
 		// espresso+chocolate
 		order3 = new Chocolate(order3);
 		result = order3.getDescription();
-		assertEquals("Esspresso chocolate", result);
+		assertEquals("Espresso chocolate", result);
 		// espresso+whipcream
 		order4 = new WhipCream(order4);
 		result = order4.getDescription();
-		assertEquals("Esspresso whip", result);
+		assertEquals("Espresso whip", result);
 	}
 
 	@Test(timeout = 1000)
