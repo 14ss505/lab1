@@ -1,18 +1,13 @@
 package lab1;
 
-public class Beverage {
+public abstract class Beverage {
 	protected SizeFactor sizeFactor;//for size cost
 	protected String description;
 	
 	public double cost() {
 		return 0;
-	}
+	}//already implemented for us
 
-	public String getDescription() {
-		return description;
-	}
-	
-	public void setDescription(String description) {
-		this.description = description;
-	}
+	public abstract String getDescription();
+	//need to implement getDescription in the subclasses.
 }

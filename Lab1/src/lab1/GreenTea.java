@@ -3,14 +3,16 @@ package lab1;
 public class GreenTea extends TeaBeverage {
 	
 	public GreenTea() {
-		this.setDescription("Green Tea");
+		description = "Green Tea";
 	}
 	
-	public String getDiscription() {
-		return description;
-	}
-
 	public double cost() {
 		return super.cost() + 1.0;
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return description;
 	}
 }

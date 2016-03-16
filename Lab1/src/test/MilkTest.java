@@ -1,4 +1,4 @@
-package lab1;
+package test;
 
 import static org.junit.Assert.*;
 
@@ -12,9 +12,13 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-//let's make a  grand Decaf Cappuccino
-public class WhipCreamTest {
-	WhipCream whipCream;
+import junit.framework.TestCase;
+import lab1.Espresso;
+import lab1.Milk;
+
+//let's make a large latte
+public class MilkTest extends TestCase {
+	Milk milk;
 	Mockery context = new JUnit4Mockery() {{
 		setImposteriser(ClassImposteriser.INSTANCE);
 	}};
@@ -22,33 +26,34 @@ public class WhipCreamTest {
 
 	@Before
 	public void setUp() throws Exception {
-		final Decaf decaf = context.mock(Decaf.class);	
+		final Espresso espresso = context.mock(Espresso.class);	
 		context.checking(new Expectations() {
 			{			
-				allowing(decaf).getDescription();
-				will(returnValue("Decaf"));
-				allowing(decaf).cost();
-				will(returnValue(1.8));//grand1.3+0.5
+				allowing(espresso).getDescription();
+				will(returnValue("Espresso"));
+				allowing(espresso).cost();
+				will(returnValue(2.0));//large1.0+1.0
 			}
 		});
-		whipCream = new WhipCream(decaf);
+		milk = new Milk(espresso);
 	}
 
 
 	@Test
 	public void testConstruction() {
-		Assert.assertNotNull(whipCream);
+		Assert.assertNotNull(milk);
 	}
 	
 	@Test
 	public void testCost() {
 		
 		DecimalFormat df = new DecimalFormat(".0");
-		Assert.assertEquals(2.1, Double.parseDouble(df.format(whipCream.cost())), 0);
+		Assert.assertEquals(2.3, Double.parseDouble(df.format(milk.cost())), 0);
 	}
 	
 	@Test
 	public void testGetDescription() {
-		Assert.assertEquals("Decaf whip", whipCream.getDescription());
+		Assert.assertEquals("Espresso Milk", milk.getDescription());
 	}
+	
 }

@@ -1,2 +1,9 @@
 1.若兄弟类之间有相同的方法和属性，将方法和属性提升到了父类中
 2.增加了setDescription方法，便于在运行时修改description
+
+3.use the factory pattern and move the if-else into the BeverageFactory class,this will make refix the code become easier
+and if we have some changes in beverage we can just modify the code in BeverageFactory
+4.use decorator pattern,let the class Beverage,BeverageWithIngredient,CoffeeBeverage,TeaBeverage become abstract class
+so the subclass must have the abstract method defined in super class,and we can make an order by wrapping it in another
+class,just like "new Milk(Decaf)"
+5.move the test classes into another package test and add a TestAll class to do all the test at the same time.

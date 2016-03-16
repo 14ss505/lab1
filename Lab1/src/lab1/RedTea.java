@@ -2,7 +2,7 @@ package lab1;
 
 public class RedTea extends TeaBeverage {
 	public RedTea() {
-		this.setDescription("Red Tea");
+		description = "Red Tea";
 	}
 
 	public String getDescription() {

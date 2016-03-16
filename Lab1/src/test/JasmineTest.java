@@ -1,4 +1,4 @@
-package lab1;
+package test;
 
 import static org.junit.Assert.*;
 
@@ -12,41 +12,45 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ChocolateTest {
-	Chocolate choco;
+import junit.framework.TestCase;
+import lab1.GreenTea;
+import lab1.Jasmine;
+
+//let's make a medium flower tea~
+public class JasmineTest extends TestCase {
+	Jasmine jasmine;
 	Mockery context = new JUnit4Mockery() {{
 		setImposteriser(ClassImposteriser.INSTANCE);
 	}};
-
+	
 	@Before
 	public void setUp() throws Exception {
-		final Espresso es = context.mock(Espresso.class);
+		final GreenTea greenTea = context.mock(GreenTea.class);	
 		context.checking(new Expectations() {
 			{			
-				allowing(es).getDescription();
-				will(returnValue("Espresso"));
-				allowing(es).cost();
-				will(returnValue(1.2));//small0.2+1.0
+				allowing(greenTea).getDescription();
+				will(returnValue("Green Tea"));
+				allowing(greenTea).cost();
+				will(returnValue(1.5));//medium0.5+1.0
 			}
 		});
-		choco = new Chocolate(es);
+		jasmine = new Jasmine(greenTea);
 	}
 
 	@Test
 	public void testConstruction() {
-		Assert.assertNotNull(choco);
+		Assert.assertNotNull(jasmine);
 	}
 	
 	@Test
 	public void testCost() {
 		
 		DecimalFormat df = new DecimalFormat(".0");
-		Assert.assertEquals(1.5, Double.parseDouble(df.format(choco.cost())), 0);
+		Assert.assertEquals(2.0, Double.parseDouble(df.format(jasmine.cost())), 0);
 	}
 	
 	@Test
 	public void testGetDescription() {
-		Assert.assertEquals("Espresso chocolate", choco.getDescription());
+		Assert.assertEquals("Green Tea Jasmine", jasmine.getDescription());
 	}
-
 }
