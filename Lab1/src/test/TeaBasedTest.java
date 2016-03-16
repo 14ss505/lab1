@@ -1,10 +1,13 @@
-package lab1;
+package test;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TeaBasedTest {
+import junit.framework.TestCase;
+import lab1.TeaBased;
+
+public class TeaBasedTest extends TestCase {
 	TeaBased tb;
 
 	@Before

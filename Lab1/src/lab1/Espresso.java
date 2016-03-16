@@ -1,11 +1,11 @@
 package lab1;
 
 public class Espresso extends CoffeeBeverage {
-	
+
 	public Espresso() {
-		this.setDescription("Espresso");
+		description = "Espresso";
 	}
-	
+
 	public String getDescription() {
 		return description;
 	}

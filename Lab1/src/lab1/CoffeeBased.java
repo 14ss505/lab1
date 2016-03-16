@@ -4,7 +4,7 @@ import java.util.Hashtable;
 
 public class CoffeeBased implements SizeFactor {
 	private Hashtable<String,Double> hash=new Hashtable<String,Double>();
-	CoffeeBased(){
+	public CoffeeBased(){
 		hash.put("small", 0.4);
 		hash.put("medium", 0.7);
 		hash.put("large", 1.0);

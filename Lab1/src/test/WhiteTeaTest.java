@@ -1,4 +1,4 @@
-package lab1;
+package test;
 
 import static org.junit.Assert.*;
 
@@ -8,7 +8,10 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class WhiteTeaTest {
+import junit.framework.TestCase;
+import lab1.WhiteTea;
+
+public class WhiteTeaTest extends TestCase {
 	WhiteTea whiteTea;
 	@Before
 	public void setUp() throws Exception {

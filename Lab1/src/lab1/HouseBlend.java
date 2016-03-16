@@ -3,7 +3,7 @@ package lab1;
 public class HouseBlend extends CoffeeBeverage {
 
 	public HouseBlend() {
-		this.setDescription("HouseBlend");
+		description = "HouseBlend";
 	}
 
 	public String getDescription() {

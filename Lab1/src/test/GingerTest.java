@@ -1,6 +1,4 @@
-package lab1;
-
-import static org.junit.Assert.*;
+package test;
 
 import java.text.DecimalFormat;
 
@@ -10,11 +8,16 @@ import org.jmock.integration.junit4.JUnit4Mockery;
 import org.jmock.lib.legacy.ClassImposteriser;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
-//let's make a large latte
-public class MilkTest {
-	Milk milk;
+import junit.framework.TestCase;
+import lab1.Ginger;
+import lab1.GreenTea;
+
+//let's make a small ginger tea~
+public class GingerTest extends TestCase {
+	Ginger ginger;
 	Mockery context = new JUnit4Mockery() {{
 		setImposteriser(ClassImposteriser.INSTANCE);
 	}};
@@ -22,34 +25,34 @@ public class MilkTest {
 
 	@Before
 	public void setUp() throws Exception {
-		final Espresso espresso = context.mock(Espresso.class);	
+		final GreenTea greenTea = context.mock(GreenTea.class);	
 		context.checking(new Expectations() {
 			{			
-				allowing(espresso).getDescription();
-				will(returnValue("Espresso"));
-				allowing(espresso).cost();
-				will(returnValue(2.0));//large1.0+1.0
+				allowing(greenTea).getDescription();
+				will(returnValue("Green Tea"));
+				allowing(greenTea).cost();
+				will(returnValue(1.2));//small0.2+1.0
 			}
 		});
-		milk = new Milk(espresso);
+		ginger = new Ginger(greenTea);
 	}
 
 
 	@Test
 	public void testConstruction() {
-		Assert.assertNotNull(milk);
+		Assert.assertNotNull(ginger);
 	}
 	
 	@Test
 	public void testCost() {
 		
 		DecimalFormat df = new DecimalFormat(".0");
-		Assert.assertEquals(2.3, Double.parseDouble(df.format(milk.cost())), 0);
+		Assert.assertEquals(1.8, Double.parseDouble(df.format(ginger.cost())), 0);
 	}
 	
 	@Test
 	public void testGetDescription() {
-		Assert.assertEquals("Espresso milk", milk.getDescription());
+		Assert.assertEquals("Green Tea Ginger", ginger.getDescription());
 	}
 	
 }

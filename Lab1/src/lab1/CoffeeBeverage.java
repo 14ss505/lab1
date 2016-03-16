@@ -1,8 +1,8 @@
 package lab1;
 
-public class CoffeeBeverage extends Beverage {
+public abstract class CoffeeBeverage extends Beverage {
 	protected String size;
-	
+
 	public CoffeeBeverage() {
 		super.sizeFactor = new CoffeeBased();
 	}
@@ -14,4 +14,5 @@ public class CoffeeBeverage extends Beverage {
 	public void setSize(String size) {
 		this.size = size;
 	}
+
 }
