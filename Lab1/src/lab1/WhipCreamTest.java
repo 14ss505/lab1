@@ -1,5 +1,7 @@
 package lab1;
 
+import static org.junit.Assert.*;
+
 import java.text.DecimalFormat;
 
 import org.jmock.Expectations;
@@ -8,12 +10,11 @@ import org.jmock.integration.junit4.JUnit4Mockery;
 import org.jmock.lib.legacy.ClassImposteriser;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-//let's make a small ginger tea~
-public class GingerTest {
-	Ginger ginger;
+//let's make a  grand Decaf Cappuccino
+public class WhipCreamTest {
+	WhipCream whipCream;
 	Mockery context = new JUnit4Mockery() {{
 		setImposteriser(ClassImposteriser.INSTANCE);
 	}};
@@ -21,34 +22,33 @@ public class GingerTest {
 
 	@Before
 	public void setUp() throws Exception {
-		final GreenTea greenTea = context.mock(GreenTea.class);	
+		final Decaf decaf = context.mock(Decaf.class);	
 		context.checking(new Expectations() {
 			{			
-				allowing(greenTea).getDescription();
-				will(returnValue("Green Tea"));
-				allowing(greenTea).cost();
-				will(returnValue(1.2));//small0.2+1.0
+				allowing(decaf).getDescription();
+				will(returnValue("Decaf"));
+				allowing(decaf).cost();
+				will(returnValue(1.8));//grand1.3+0.5
 			}
 		});
-		ginger = new Ginger(greenTea);
+		whipCream = new WhipCream(decaf);
 	}
 
 
 	@Test
 	public void testConstruction() {
-		Assert.assertNotNull(ginger);
+		Assert.assertNotNull(whipCream);
 	}
 	
 	@Test
 	public void testCost() {
 		
 		DecimalFormat df = new DecimalFormat(".0");
-		Assert.assertEquals(1.8, Double.parseDouble(df.format(ginger.cost())), 0);
+		Assert.assertEquals(2.1, Double.parseDouble(df.format(whipCream.cost())), 0);
 	}
 	
 	@Test
 	public void testGetDescription() {
-		Assert.assertEquals("Green Tea ginger", ginger.getDescription());
+		Assert.assertEquals("Decaf whip", whipCream.getDescription());
 	}
-	
 }
