@@ -8,6 +8,10 @@ public abstract class Beverage {
 		return 0;
 	}//already implemented for us
 
-	public abstract String getDescription();
+//	public abstract String getDescription();
 	//need to implement getDescription in the subclasses.
+
+	public String getDescription() {
+		return description;
+	}
 }

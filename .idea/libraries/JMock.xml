@@ -1,0 +1,31 @@
+<component name="libraryTable">
+  <library name="JMock">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/bsh-core-2.0b4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/cglib-nodep-2.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/hamcrest-core-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/hamcrest-library-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/hamcrest-unit-test-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/jmock-2.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/jmock-junit3-2.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/jmock-junit4-2.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/jmock-legacy-2.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/jmock-script-2.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/objenesis-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/hamcrest-core-1.3-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/hamcrest-library-1.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/hamcrest-core-1.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/hamcrest-library-1.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/hamcrest-unit-test-1.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/jmock-2.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/jmock-junit3-2.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/jmock-junit4-2.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/jmock-legacy-2.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/lib/Jmock/jmock-script-2.6.0.jar!/" />
+    </SOURCES>
+  </library>
+</component>

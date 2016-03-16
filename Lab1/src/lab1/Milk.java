@@ -1,18 +1,15 @@
 package lab1;
 
 public class Milk extends BeverageWithIngredient {
-	Beverage drink;
-	public Milk(Beverage drink) {
-		this.drink = drink;
-	}
+    Beverage drink;
 
-	public double cost() {
-		return 0.3 + drink.cost();
-	}
+    public Milk(Beverage drink) {
+        this.drink = drink;
+        description = drink.getDescription() + " Milk";
+    }
 
-	@Override
-	public String getDescription() {
-		// TODO Auto-generated method stub
-		return drink.getDescription()+" Milk";
-	}
+    public double cost() {
+        return 0.3 + drink.cost();
+    }
+
 }

@@ -1,18 +1,14 @@
 package lab1;
 
 public class Jasmine extends BeverageWithIngredient {
-	Beverage drink;
-	public Jasmine(Beverage drink) {
-		this.drink = drink;
-	}
+    Beverage drink;
 
-	public double cost() {
-		return 0.5 + drink.cost();
-	}
+    public Jasmine(Beverage drink) {
+        this.drink = drink;
+        description = drink.getDescription() + " Jasmine";
+    }
 
-	@Override
-	public String getDescription() {
-		// TODO Auto-generated method stub
-		return drink.getDescription()+" Jasmine";
-	}
+    public double cost() {
+        return 0.5 + drink.cost();
+    }
 }

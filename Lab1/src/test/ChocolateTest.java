@@ -50,7 +50,7 @@ public class ChocolateTest extends TestCase {
 	
 	@Test
 	public void testGetDescription() {
-		Assert.assertEquals("Espresso chocolate", choco.getDescription());
+		Assert.assertEquals("Espresso Chocolate", choco.getDescription());
 	}
 
 }
