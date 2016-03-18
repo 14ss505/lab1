@@ -1,9 +1,9 @@
 package lab1;
 
 public class WhiteTea extends TeaBeverage {
-	private String description;
-
+	
 	public WhiteTea() {
+		setCost(1.0);
 		description = "White Tea";
 	}
 	
@@ -12,6 +12,6 @@ public class WhiteTea extends TeaBeverage {
 	}
 
 	public double cost() {
-		return super.cost() + 1.0;
+		return super.cost()+this.cost;
 	}
 }

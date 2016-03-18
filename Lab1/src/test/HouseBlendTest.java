@@ -1,6 +1,4 @@
-package lab1;
-
-import static org.junit.Assert.*;
+package test;
 
 import java.text.DecimalFormat;
 
@@ -8,7 +6,10 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class HouseBlendTest {
+import junit.framework.TestCase;
+import lab1.HouseBlend;
+
+public class HouseBlendTest extends TestCase{
 	HouseBlend hb;
 	
 	@Before

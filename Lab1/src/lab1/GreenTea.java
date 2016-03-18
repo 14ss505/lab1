@@ -3,14 +3,14 @@ package lab1;
 public class GreenTea extends TeaBeverage {
 	
 	public GreenTea() {
-		this.setDescription("Green Tea");
+		setCost(1.0);
+		description = "Green Tea";
 	}
 	
-	public String getDiscription() {
+	public String getDescription() {
 		return description;
 	}
-
 	public double cost() {
-		return super.cost() + 1.0;
+		return super.cost()+this.cost;
 	}
 }

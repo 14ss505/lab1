@@ -1,4 +1,4 @@
-package lab1;
+package test;
 
 import java.text.DecimalFormat;
 
@@ -6,7 +6,10 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class DecafTest {
+import junit.framework.TestCase;
+import lab1.Decaf;
+
+public class DecafTest extends TestCase{
 	Decaf decaf;
 
 	@Before

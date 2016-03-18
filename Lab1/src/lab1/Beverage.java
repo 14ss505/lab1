@@ -1,18 +1,25 @@
 package lab1;
 
-public class Beverage {
-	protected SizeFactor sizeFactor;//for size cost
+public abstract class Beverage {
+	protected double cost;// generalize from subclasses
 	protected String description;
-	
-	public double cost() {
-		return 0;
+
+	// add default constructor
+	public Beverage() {
+
 	}
 
 	public String getDescription() {
 		return description;
 	}
-	
-	public void setDescription(String description) {
-		this.description = description;
+
+	// add setter for cost
+	protected void setCost(double cost) {
+		this.cost = cost;
+	}
+
+	// add getter for cost
+	public double cost() {
+		return 0;
 	}
 }

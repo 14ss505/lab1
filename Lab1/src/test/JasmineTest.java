@@ -1,6 +1,5 @@
-package lab1;
+package test;
 
-import static org.junit.Assert.*;
 
 import java.text.DecimalFormat;
 
@@ -12,8 +11,12 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import junit.framework.TestCase;
+import lab1.GreenTea;
+import lab1.Jasmine;
+
 //let's make a medium flower tea~
-public class JasmineTest {
+public class JasmineTest extends TestCase {
 	Jasmine jasmine;
 	Mockery context = new JUnit4Mockery() {{
 		setImposteriser(ClassImposteriser.INSTANCE);
@@ -47,6 +50,6 @@ public class JasmineTest {
 	
 	@Test
 	public void testGetDescription() {
-		Assert.assertEquals("Green Tea jasmine", jasmine.getDescription());
+		Assert.assertEquals("Green Tea Jasmine", jasmine.getDescription());
 	}
 }

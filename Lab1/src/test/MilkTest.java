@@ -1,6 +1,4 @@
-package lab1;
-
-import static org.junit.Assert.*;
+package test;
 
 import java.text.DecimalFormat;
 
@@ -12,8 +10,12 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import junit.framework.TestCase;
+import lab1.Espresso;
+import lab1.Milk;
+
 //let's make a large latte
-public class MilkTest {
+public class MilkTest extends TestCase {
 	Milk milk;
 	Mockery context = new JUnit4Mockery() {{
 		setImposteriser(ClassImposteriser.INSTANCE);
@@ -49,7 +51,7 @@ public class MilkTest {
 	
 	@Test
 	public void testGetDescription() {
-		Assert.assertEquals("Espresso milk", milk.getDescription());
+		Assert.assertEquals("Espresso Milk", milk.getDescription());
 	}
 	
 }

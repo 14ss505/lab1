@@ -3,7 +3,8 @@ package lab1;
 public class HouseBlend extends CoffeeBeverage {
 
 	public HouseBlend() {
-		this.setDescription("HouseBlend");
+		setCost(0.8);
+		description = "HouseBlend";
 	}
 
 	public String getDescription() {
@@ -11,6 +12,6 @@ public class HouseBlend extends CoffeeBeverage {
 	}
 
 	public double cost() {
-		return super.cost() + 0.8;
+		return super.cost()+this.cost;
 	}
 }

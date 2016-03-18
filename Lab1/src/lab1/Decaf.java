@@ -3,15 +3,15 @@ package lab1;
 public class Decaf extends CoffeeBeverage {
 
 	public Decaf() {
-		this.setDescription("Decaf");;
+		setCost(0.5);
+		description = "Decaf";
 	}
 
 	public String getDescription() {
-		return description;
-	}
+		return description;	}
 
 	public double cost() {
-		return super.cost() + 0.5;
+		return super.cost()+this.cost;
 	}
 
 }

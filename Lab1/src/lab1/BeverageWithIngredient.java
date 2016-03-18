@@ -1,13 +1,15 @@
 package lab1;
 
-public class BeverageWithIngredient extends Beverage {
-	private Beverage drink;
-
+public abstract class BeverageWithIngredient extends Beverage {
+	protected Beverage drink;
+	
+	// add constructor
 	public BeverageWithIngredient(Beverage drink) {
 		this.drink = drink;
 	}
-	
+		
+    //generalize cost() from subclasses 
 	public double cost() {
-		return drink.cost();
+		return cost + drink.cost();
 	}
 }
