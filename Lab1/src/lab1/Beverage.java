@@ -9,9 +9,6 @@ public abstract class Beverage {
 
 	}
 
-	// public abstract String getDescription();
-	// need to implement getDescription in the subclasses.
-
 	public String getDescription() {
 		return description;
 	}

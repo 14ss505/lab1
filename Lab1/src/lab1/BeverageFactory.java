@@ -1,7 +1,5 @@
 package lab1;
 
-import java.util.Hashtable;
-
 public class BeverageFactory {
 	private Beverage order;
 

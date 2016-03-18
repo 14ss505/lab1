@@ -7,6 +7,4 @@ public class WhipCream extends BeverageWithIngredient {
     	setCost(0.3);
         description = drink.getDescription() + " Whip";
     }
-
-  
 }

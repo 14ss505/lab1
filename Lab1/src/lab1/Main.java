@@ -57,7 +57,8 @@ public class Main {
 		*/
 		// and so on...
 		//print the description
-		System.out.println("The description of your order is: " + order.getDescription());
+		//System.out.println("The description of your order is: " + order.getDescription());
+		System.out.println("The description of your order is: " + beveStr+" "+size+" "+ingredients);
 
 		// print the cost
 		DecimalFormat df = new DecimalFormat(".0");

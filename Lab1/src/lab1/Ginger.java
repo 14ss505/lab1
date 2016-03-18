@@ -8,6 +8,4 @@ public class Ginger extends BeverageWithIngredient {
         description = drink.getDescription() + " Ginger";
     }
 
-   
-
 }
