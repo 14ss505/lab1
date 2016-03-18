@@ -1,7 +1,9 @@
 package lab1;
 
+import java.util.Hashtable;
+
 public class BeverageFactory {
-	Beverage order;
+	private Beverage order;
 
 	public Beverage makeOrder(String beveStr, String size, String ingredient) {
 		if (beveStr.equals("espresso")) {

@@ -34,7 +34,7 @@ public class Main {
 		String ingredients="";
 		if (i < disArr.length) {
 			for(int j = i+1;j<disArr.length;j++){
-				ingredients += disArr[j];
+				ingredients += disArr[j]+ " ";
 			}
 		}
 

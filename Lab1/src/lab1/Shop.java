@@ -1,7 +1,7 @@
 package lab1;
 
 public class Shop {
-	BeverageFactory bf;
+	private BeverageFactory bf;
 	public Shop(BeverageFactory bf){
 		this.bf = bf;
 	}

@@ -3,16 +3,14 @@ package lab1;
 public class GreenTea extends TeaBeverage {
 	
 	public GreenTea() {
+		setCost(1.0);
 		description = "Green Tea";
 	}
 	
-	public double cost() {
-		return super.cost() + 1.0;
-	}
-
-	@Override
 	public String getDescription() {
-		// TODO Auto-generated method stub
 		return description;
+	}
+	public double cost() {
+		return super.cost()+this.cost;
 	}
 }
