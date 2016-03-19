@@ -1,5 +1,7 @@
 package lab1;
 
+import java.text.DecimalFormat;
+
 public class Espresso extends CoffeeBeverage {
 
 	public Espresso() {
@@ -12,6 +14,8 @@ public class Espresso extends CoffeeBeverage {
 	}
 
 	public double cost() {
-		return super.cost()+this.cost;
+		DecimalFormat df = new DecimalFormat(".0");
+		double result = Double.parseDouble(df.format(super.cost()+this.cost));
+		return result;
 	}
 }

@@ -25,8 +25,7 @@ public class BeverageFactory {
 			order = new Espresso();
 			((CoffeeBeverage) order).setSize(size);
 			order = new WhipCream(order);
-		} else if (beveStr.equals("decaf mocha")) {// following 3 is the
-			// addition
+		} else if (beveStr.equals("decaf mocha")) {
 			order = new Decaf();
 			((CoffeeBeverage) order).setSize(size);
 			order = new Chocolate(order);

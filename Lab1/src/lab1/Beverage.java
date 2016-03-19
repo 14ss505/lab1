@@ -1,7 +1,7 @@
 package lab1;
 
 public abstract class Beverage {
-	protected double cost;// generalize from subclasses
+	protected double cost;//all subclasses extends it
 	protected String description;
 
 	// add default constructor

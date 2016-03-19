@@ -1,5 +1,7 @@
 package lab1;
 
+import java.text.DecimalFormat;
+
 public class GreenTea extends TeaBeverage {
 	
 	public GreenTea() {
@@ -11,6 +13,8 @@ public class GreenTea extends TeaBeverage {
 		return description;
 	}
 	public double cost() {
-		return super.cost()+this.cost;
+		DecimalFormat df = new DecimalFormat(".0");
+		double result = Double.parseDouble(df.format(super.cost()+this.cost));
+		return result;
 	}
 }
